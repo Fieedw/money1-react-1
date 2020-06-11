@@ -27,12 +27,12 @@ const nav = () => {
     <Nav>
       <ul>
         <li>
-          <Icon name="money"/>
-          <Link to="/money">记账</Link>
-        </li>
-        <li>
           <Icon name="label"/>
           <Link to="/tags">标签</Link>
+        </li>
+        <li>
+          <Icon name="money"/>
+          <Link to="/money">记账</Link>
         </li>
         <li>
           <Icon name="statistics"/>
