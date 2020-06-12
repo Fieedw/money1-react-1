@@ -3,19 +3,25 @@ import React from 'react';
 import styled from 'styled-components';
 
 const TagsSection =styled.section`
-background:#f2f2f2;padding: 12px 16px;
+background:white;padding: 12px 16px;
 > ol { margin: 0 -12px;
   > li {
- background:#b2b2b2;border-radius:18px;display:inline-block;
+ background:#e2e2e2;border-radius:18px;display:inline-block;
  padding:3px 18px;font-size: 14px;margin: 8px 12px;
     }
 }
 > button{
 background:none;border:none;
-padding:2px 4px;border-bottom:1px solid blue;
+padding:2px 4px;border-bottom:1px solid #666;
 color:#666;margin-top: 8px;
 }`
-const NotesSection =styled.section``
+const NotesSection =styled.section`
+background: #f5f5f5;padding: 0 16px;font-size:14px;
+> label {display:flex;align-items: center;
+  > span {margin-right: 16px ;white-space: nowrap;}
+  > input {display: block;width: 100%;height:72px;background: none;border:none;}
+ } 
+`
 const CategorySection =styled.section``
 const NumberPadSection =styled.section``
 
@@ -34,7 +40,7 @@ function Money() {
       <NotesSection>
         <label>
           <span>备注</span>
-          <input type="text"/>
+          <input type="text" placeholder="在这里添加备注"/>
         </label>
       </NotesSection>
       <CategorySection>
