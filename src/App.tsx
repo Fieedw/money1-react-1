@@ -6,14 +6,16 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import Layout from './Layout';
 import NoMatch from 'views/Nomatch';
 import Statistics from 'views/Statistics';
 import Money from 'views/Money';
 import Tags from 'views/Tags';
+import styled from 'styled-components';
 
+const AppWrapper =styled.div`color:#333`
 function App() {
   return (
+    <AppWrapper>
     <Router>
           <Switch>
             <Route path="/tags">
@@ -31,15 +33,8 @@ function App() {
             </Route>
           </Switch>
     </Router>
+    </AppWrapper>
   );
 }
-
-
-
-
-
-
-
-
 
 export default App;
