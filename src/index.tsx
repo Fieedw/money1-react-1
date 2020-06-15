@@ -4,9 +4,12 @@ import App from './App';
 import 'index.scss'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  //普通模式
+  <App/>,
+  //严格模式
+  // <React.StrictMode>
+  //   <App />
+  // </React.StrictMode>,
   document.getElementById('root')
 );
 
