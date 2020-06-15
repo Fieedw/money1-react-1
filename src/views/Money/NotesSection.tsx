@@ -4,7 +4,7 @@ import React, {useRef, useState} from 'react';
 const Wrapper = styled.section`
 background: #f5f5f5;padding: 0 16px;font-size:14px;
 > label {display:flex;align-items: center;
-  > span {margin-right: 16px ;white-space: nowrap;}
+  > span {margin-right: 16px ;white-space: nowrap;color:#f60;}
   > input {display: block;width: 100%;height:72px;background: none;border:none;}
  } 
 `;

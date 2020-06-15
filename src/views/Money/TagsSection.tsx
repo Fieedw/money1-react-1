@@ -6,7 +6,7 @@ background:white;padding: 12px 16px;
 flex-grow:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;
 > ol { margin: 0 -12px;
   > li {
- background:#e2e2e2;border-radius:18px;display:inline-block;
+ background:#ffe793;color:#666;border-radius:18px;display:inline-block;
  padding:3px 18px;font-size: 14px;margin: 8px 12px;
  &.selected{background: #f60;color:white;}
     }
@@ -14,7 +14,7 @@ flex-grow:1;display:flex;flex-direction:column;justify-content:flex-end;align-it
 > button{
 
 background:none;border:none;
-padding:2px 4px;border-bottom:1px solid #666;
+padding:2px 4px;border-bottom:1px solid #f60;
 color:#666;margin-top: 8px;
 }`;
 const TagsSection: React.FC = (props) => {
