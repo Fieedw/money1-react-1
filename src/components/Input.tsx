@@ -6,11 +6,14 @@ const Label = styled.label`
   > span {margin-right: 16px ;white-space: nowrap;color:#f60;}
   > input {display: block;width: 100%;height:72px;background: none;border:none;}
   `;
-const Input: React.FC = () => {
+type Props = {
+  label: string;
+} & React.InputHTMLAttributes<HTMLInputElement>
+const Input: React.FC<Props> = (props) => {
   return (
     <Label>
-      <span>备注</span>
-      <input type="text" placeholder="在这里添加备注"
+      <span>{props.label}}</span>
+      <input type={props.type} placeholder={props.placeholder} defaultValue={props.defaultValue} onBlur={props.onBlur}
         //受控组件
         // value={note}
         // onChange={(e) => setNote(e.target.value)}
@@ -22,4 +25,4 @@ const Input: React.FC = () => {
     </Label>
   );
 };
-export {Input}
+export {Input};
