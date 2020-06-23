@@ -11,12 +11,13 @@ import {useRecords} from '../hooks/useRecords';
 const MyLayout = styled(Layout)`display:flex;flex-direction:column;`;
 type Category = '-' | '+'
 
-const defaultFormData ={
+const defaultFormData = {
   tagIds: [] as number[],
   note: '',
   category: '-' as Category,
   amount: 0
-}
+};
+
 function Money() {
   const [selected, setSelected] = useState(defaultFormData);
   const {addRecord} = useRecords();
@@ -24,9 +25,9 @@ function Money() {
     setSelected({...selected, ...obj});
   };
   const submit = () => {
-    if(addRecord(selected)){
-      alert('保存成功')
-      setSelected(defaultFormData)
+    if (addRecord(selected)) {
+      alert('保存成功');
+      setSelected(defaultFormData);
     }
   };
   return (
