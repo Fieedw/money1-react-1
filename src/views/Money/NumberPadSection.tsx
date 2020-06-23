@@ -35,7 +35,7 @@ const NumberPadSection: React.FC<Props> = (props) => {
   return (
     <Wrapper>
       <div className="output">{output}</div>
-      <div className="pad" clearfix="true" onClick={onClickButtonWrapper}>
+      <div className="pad" onClick={onClickButtonWrapper}>
         <button>1</button>
         <button>2</button>
         <button>3</button>

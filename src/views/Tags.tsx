@@ -18,7 +18,7 @@ border-bottom:1px solid #e5e5e5;line-height:20px;margin-left:16px;
 
 
 function Tags() {
-  const {tags} = useTags();
+  const {tags,addTag} = useTags();
   return (
     <Layout>
       <TagList>
@@ -32,7 +32,7 @@ function Tags() {
       </TagList>
       <Center>
         <Space/>
-        <Button>新增标签</Button>
+        <Button onClick={addTag}>新增标签</Button>
       </Center>
     </Layout>
   );

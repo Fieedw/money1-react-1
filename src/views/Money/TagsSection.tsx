@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
 import {useTags} from '../../useTags';
-import {createId} from '../../lib/createld';
 
-const Wrapper_TagsSection = styled.section`
+const WrapperTagsSection = styled.section`
 background:white;padding: 12px 16px;
 flex-grow:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;
 > ol { margin: 0 -12px;
@@ -21,17 +20,10 @@ color:#666;margin-top: 8px;
 }`;
 type Props = { value: number[];onChange:(selectedChunksResult: number[])=>void; }
 const TagsSection: React.FC<Props> = (props) => {
-  const {tags, setTags} = useTags();
+  const {tags, addTag} = useTags();
   const selectedTagIds = props.value;
 
-  const onAddTag =()=> {
-    const tagName = window.prompt('新标签的名称为');
-    if (tagName !== null) {
-      setTags([...tags,{id:createId(),name:tagName}]);
-    }
-  }
-
-  const onToggleTag = (tagId: number) => {
+    const onToggleTag = (tagId: number) => {
     const index = selectedTagIds.indexOf(tagId);
     if (index >= 0) {
       //如果tag已被选中，就复制所有没有被选中的tag,作为新的 selectedTag
@@ -42,12 +34,12 @@ const TagsSection: React.FC<Props> = (props) => {
   };
   const getClass = (tagId: number) => selectedTagIds.indexOf(tagId) >= 0 ? 'selected' : '';
   return (
-    <Wrapper_TagsSection>
+    <WrapperTagsSection>
       <ol>
         {tags.map(tag => <li key={tag.id} onClick={() => {onToggleTag(tag.id);}} className={getClass(tag.id)}>{tag.name}</li>)}
       </ol>
-      <button onClick={onAddTag}>新增标签</button>
-    </Wrapper_TagsSection>
+      <button onClick={addTag}>新增标签</button>
+    </WrapperTagsSection>
   );
 };
 export {TagsSection};
