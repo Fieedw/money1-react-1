@@ -1,4 +1,4 @@
-import Layout from '../Layout';
+import Layout from '../components/Layout';
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import {TagsSection} from './Money/TagsSection';
@@ -22,13 +22,6 @@ function Money() {
   }
   return (
     <MyLayout>
-      {selected.tagIds.join('.')}
-      <hr/>
-      {selected.note}
-      <hr/>
-      {selected.category}
-      <hr/>
-      {selected.amount}
       <TagsSection value={selected.tagIds} onChange={tagIds => onChange({tagIds})}/>
       <NotesSection value={selected.note}
                     onChange={note => onChange({note})}
