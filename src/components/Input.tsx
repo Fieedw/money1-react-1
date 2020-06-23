@@ -10,10 +10,11 @@ type Props = {
   label: string;
 } & React.InputHTMLAttributes<HTMLInputElement>
 const Input: React.FC<Props> = (props) => {
+  const {label,...reset} = props;
   return (
     <Label>
       <span>{props.label}}</span>
-      <input type={props.type} placeholder={props.placeholder} defaultValue={props.defaultValue} onBlur={props.onBlur}
+      <input {...reset}
         //受控组件
         // value={note}
         // onChange={(e) => setNote(e.target.value)}
