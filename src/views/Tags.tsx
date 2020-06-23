@@ -3,8 +3,10 @@ import React from 'react';
 import {useTags} from '../useTags';
 import styled from 'styled-components';
 import Icon from '../components/Icon';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {Button} from '../components/Button';
+import {Center} from '../components/Center';
+import {Space} from '../components/Space';
 
 const TagList = styled.ol`
 font-size:16px;background:white;
@@ -14,12 +16,6 @@ border-bottom:1px solid #e5e5e5;line-height:20px;margin-left:16px;
 }
 `;
 
-const Center = styled.div`
-display:flex;justify-content: center;align-items: center;flex-direction: column;
-`;
-const Space =styled.div`
-height:16px;margin-top:20px;
-`
 
 function Tags() {
   const {tags} = useTags();
@@ -28,15 +24,15 @@ function Tags() {
       <TagList>
         {tags.map(tag =>
           <li key={tag.id}>
-            <Link to={'/tags/'+tag.id}>
-            <span className="oneLine">{tag.name}</span>
-            <Icon name="right"/>
+            <Link to={'/tags/' + tag.id}>
+              <span className="oneLine">{tag.name}</span>
+              <Icon name="right"/>
             </Link>
           </li>)}
       </TagList>
       <Center>
         <Space/>
-          <Button>新增标签</Button>
+        <Button>新增标签</Button>
       </Center>
     </Layout>
   );
