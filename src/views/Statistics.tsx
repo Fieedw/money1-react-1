@@ -13,7 +13,7 @@ padding:10px 16px;margin-top:5px;background:white;
 > .amount{color:#333;}
 `;
 const Header = styled.h3`
-padding:10px 16px;font-size:18px;line-height:20px;color:#f60;
+padding:10px 0 0 20px;font:inherit;line-height:20px;color:#f60;
 `;
 
 function Statistics() {
