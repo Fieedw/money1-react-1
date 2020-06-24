@@ -43,7 +43,7 @@ const Tag: React.FC = () => {
             <Space/>
             <Space/>
             <Button onClick={() => deleteTag(tag.id)}>删除标签</Button>
-          </Center></div> : <Center>tag不存在</Center>
+          </Center></div> : <Center>删除成功</Center>
       }
     </Layout>
   );

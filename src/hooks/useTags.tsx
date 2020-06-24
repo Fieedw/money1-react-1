@@ -44,7 +44,7 @@ const useTags = () => {//封装一个自定义 Hook
     // setTags(tagsClone);
   };
   const addTag =()=> {
-    const tagName = window.prompt('新标签的名称为');
+    const tagName = window.prompt('请输入新的标签名');
     if (tagName !== null && tagName !=='') {
       setTags([...tags,{id:createId(),name:tagName}]);
     }
