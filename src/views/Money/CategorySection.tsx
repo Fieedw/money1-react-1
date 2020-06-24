@@ -5,7 +5,7 @@ const Wrapper = styled.section`
 font-size:24px;
 > ul{display:flex;background:#ffed5d;
   >li{width:50%;text-align:center;padding:16px 0;position:relative;&.selected::after{content:'';
-  display:block;height:3px;background:#fd6600;position:absolute;bottom:0;width:100%;left:0;  
+  display:block;height:3px;background:#f60;position:absolute;bottom:0;width:100%;left:0;  
   }  
   }
 }`;
