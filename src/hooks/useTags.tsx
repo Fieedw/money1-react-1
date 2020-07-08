@@ -8,16 +8,16 @@ const useTags = () => {//封装一个自定义 Hook
     let localTags =JSON.parse(window.localStorage.getItem('tags')||'[]')
     if (localTags.length ===0){
       localTags =[
-        {id: createId(), name: '衣'},
-        {id: createId(), name: '食'},
-        {id: createId(), name: '住'},
-        {id: createId(), name: '行'}
+        {id: .1, name: '衣'},
+        {id: .2, name: '食'},
+        {id: .3, name: '住'},
+        {id: .4, name: '行'}
       ]
     }setTags(localTags)
   },[])
   useUpdate(()=>{
     window.localStorage.setItem('tags',JSON.stringify(tags))
-  },[tags])
+  },tags)
   const findTag = (id: number) => tags.filter(tag => tag.id === id)[0];
   const findTagIndex = (id: number) => {
     let result = -1;
