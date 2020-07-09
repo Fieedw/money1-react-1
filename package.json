@@ -1,6 +1,7 @@
 {
   "name": "money-1",
   "version": "0.1.0",
+  "homepage": "https://fieedw.github.io/money1-react/",
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
